@@ -1,0 +1,1 @@
+<?phpclass example extends model {		function test() {		$stmt = $this->db->query('select * from test');		$res = $stmt->fetch();		return $res;	}}

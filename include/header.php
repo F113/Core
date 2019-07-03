@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="ru"><head>	<title></title>		<meta http-equiv="content-type" content="text/html; charset=windows-1251" />	<meta name="description" content="" />		<link href="/img/favicon.gif" rel="icon"/>	<link href="/css/style.css" type="text/css" rel="stylesheet"/>	</head><body><?php print_r($args);

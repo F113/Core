@@ -1,0 +1,14 @@
+* {
+	position:relative; 
+	padding:0; 
+	margin:0; 
+	font-style: normal; 
+	font-weight: normal;
+}
+
+html {min-height:100%;}
+body {height:100%;}
+
+.fr {display:flex; flex-direction:column; align-items:center;}
+.fc {display:flex; flex-direction:row;    align-items:center;}
+

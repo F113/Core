@@ -1,0 +1,1 @@
+<?phprequire_once(__DIR__ . "/../config.php");if (!defined('PATTERNS'))      die('"PATTERNS" constant not found in config.php');if (!trait_exists('Patterns')) die('"Patterns" trait not found in config.php');require_once(__DIR__ . "/class.core.php");require_once(__DIR__ . "/class.model.php");new core($_GET['route']);
