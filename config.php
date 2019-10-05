@@ -14,7 +14,7 @@ define("DB", array (
 define ("PATTERNS", array (
 	"index"  => "default",
 	"error"  => "error",
-	"ajax"   => "ajax"
+	"ajax"   => "empty"
 ));
 
 trait Patterns {
@@ -27,11 +27,12 @@ trait Patterns {
 		$this->include('footer');
 	}
 	
-	function pattern_ajax ($path) {
+	function pattern_empty ($path) {
 		$this->include($path);
 	}
 	
 	function pattern_error ($path) {
+		http_response_code(404);
 		$this->include('header');
 		$this->include('error');
 		$this->include('footer');

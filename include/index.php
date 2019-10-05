@@ -1,1 +1,1 @@
-<div>HELLO WORLD</div>
+<?php Core::message('Edit ' . __FILE__); ?>

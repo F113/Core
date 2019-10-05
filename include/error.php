@@ -1,0 +1,1 @@
+<?php Core::message('Edit ' . __FILE__); ?>
