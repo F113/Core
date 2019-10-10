@@ -18,10 +18,8 @@ define ("PATTERNS", array (
 ));
 
 trait Patterns {
-    function pattern_default ($path) {
-		# Example : $this->model('example', $this::db);
-		$this->model('example', DB);
-		
+    function pattern_default ($path) {		
+		$this->model('example', DB);		
 		$this->include('header');
 		$this->include($path);
 		$this->include('footer');

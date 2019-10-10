@@ -1,1 +1,1 @@
-<?phpclass example extends model {	function test() {		$stmt = $this->db->query('select * from test');		$res = $stmt->fetch();		return $res;	}}
+<?phpclass Example extends Model {	function test() {		$stmt = $this->db->query('show tables');		$res = $stmt->fetch();		return $res;	}}
