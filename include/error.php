@@ -1,1 +1,1 @@
-<?php Core::message('Edit ' . __FILE__); ?>
+<?php Functions::warning('Edit ' . __FILE__); ?>

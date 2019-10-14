@@ -12,7 +12,13 @@ define("DB", array (
 ));
 
 define ("PATTERNS", array (
-	"index"  => "default",
+	"index"  => [
+		"pattern" => "default",
+		"data"    => [
+			"title"       => "page title",
+			"description" => "page description"
+		]
+	],
 	"error"  => "error",
 	"ajax"   => "empty"
 ));
