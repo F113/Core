@@ -1,1 +1,1 @@
-<?phpclass Model {	private $db;		function __construct ($attr) {		$this->db = new PDO("mysql:host=".$attr["hostname"].";dbname=".$attr["name"], $attr["username"], $attr["password"]);		$this->db->query("SET NAMES 'utf8'");	}}
+<?phpclass Model {	protected $db;		function __construct ($attr) {		$this->db = new PDO("mysql:host=".$attr["hostname"].";dbname=".$attr["name"], $attr["username"], $attr["password"]);		$this->db->query("SET NAMES 'utf8'");	}}
