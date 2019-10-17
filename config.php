@@ -1,37 +1,37 @@
 <?php
-define("CONFIG", array (
-	'config_value' => 400,
-	'max_value' => 1000
-));
+trait Config {
+	
+	protected $config = [
+		'example' => 'value'
+	];
 
-define("DB", array (
-	"hostname" => "127.0.0.1",
-	"username" => "root",
-	"password" => "",
-	"name"     => "local"
-));
+	protected $routes = [
+		"index"  => [
+			"pattern" => "default",
+			"data"    => [
+				"title"       => "page title",
+				"description" => "page description"
+			]
+		],		
+		"error"  => "error",
+		"ajax"   => "blank"
+	];
 
-define ("PATTERNS", array (
-	"index"  => [
-		"pattern" => "default",
-		"data"    => [
-			"title"       => "page title",
-			"description" => "page description"
-		]
-	],
-	"error"  => "error",
-	"ajax"   => "empty"
-));
-
-trait Patterns {
-    function pattern_default ($path) {		
-		$this->model('example', DB);		
+	protected $db = [
+		"hostname" => "127.0.0.1",
+		"username" => "root",
+		"password" => "",
+		"dbname"     => "local"
+	];
+	
+    function pattern_default ($path) {
+		$this->model('Example', $this->db);
 		$this->include('header');
 		$this->include($path);
 		$this->include('footer');
 	}
 	
-	function pattern_empty ($path) {
+	function pattern_blank ($path) {
 		$this->include($path);
 	}
 	
@@ -41,4 +41,5 @@ trait Patterns {
 		$this->include('error');
 		$this->include('footer');
 	}
+	
 }
