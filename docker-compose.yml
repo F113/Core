@@ -10,11 +10,13 @@ services:
     volumes:
       - ${PROJECT_ROOT}/:/var/www/html/
     environment:
+      MYSQL_ROOT_USER: root
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_USER: "${DB_USERNAME}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
-    container_name: php_z3
+      MYSQL_HOST: mysql
+    container_name: php
   apache:
     build:
       context: './apache/'
@@ -30,7 +32,7 @@ services:
       - "80:80"
     volumes:
       - ${PROJECT_ROOT}/:/var/www/html/
-    container_name: apache_z3
+    container_name: apache
   mysql:
     image: mysql:${MYSQL_VERSION:-latest}
     restart: always
@@ -45,7 +47,7 @@ services:
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_USER: "${DB_USERNAME}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
-    container_name: mysql_z3
+    container_name: mysql
 networks:
   frontend:
   backend:
