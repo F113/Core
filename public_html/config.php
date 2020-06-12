@@ -24,7 +24,6 @@ $routes = [
 trait Patterns {
 
     function pattern_default($path) {
-        //$this->model('Example', $this->db);
         $this->load('header');
         $this->load($path);
         $this->load('footer');
