@@ -48,6 +48,7 @@ services:
       MYSQL_USER: "${DB_USERNAME}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
     container_name: mysql
+
 networks:
   frontend:
   backend:

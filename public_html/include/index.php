@@ -1,2 +1,2 @@
-<?php 
-Functions::warning('Edit ' . __FILE__);
+<?php
+Core::warning('Edit ' . __FILE__);
