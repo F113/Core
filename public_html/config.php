@@ -4,10 +4,12 @@
 *******************************************************
 *******************************************************/
 
-define("DB_HOSTNAME", getenv('MYSQL_HOST'));
-define("DB_USERNAME", getenv('MYSQL_ROOT_USER'));
-define("DB_PASSWORD", getenv('MYSQL_ROOT_PASSWORD'));
-define("DB_NAME",     getenv('MYSQL_DATABASE'));
+$db_settings = [
+    "db_hostname" => getenv('MYSQL_HOST'),
+    "db_username" => getenv('MYSQL_ROOT_USER'),
+    "db_password" => getenv('MYSQL_ROOT_PASSWORD'),
+    "db_name"     => getenv('MYSQL_DATABASE')
+];
 
 $routes = [
     "index" => [
