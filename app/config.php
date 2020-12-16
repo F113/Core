@@ -1,15 +1,14 @@
 <?php
 
-/******************************************************
-*******************************************************
-*******************************************************/
-
 $db_settings = [
     "db_hostname" => getenv('MYSQL_HOST'),
-    "db_username" => getenv('MYSQL_ROOT_USER'),
-    "db_password" => getenv('MYSQL_ROOT_PASSWORD'),
-    "db_name"     => getenv('MYSQL_DATABASE')
+    "db_username" => getenv('MYSQL_USERNAME'),
+    "db_password" => getenv('MYSQL_PASSWORD'),
+    "db_name"     => getenv('MYSQL_DATABASE'),
+    "db_port"     => getenv('MYSQL_PORT'),
 ];
+print_r(getenv());
+print_r($db_settings);
 
 $routes = [
     "index" => [
