@@ -1,1 +1,1 @@
-<?phpclass Example extends Model {    	function test() {		$stmt = $this->db->query('show tables');		$res = $stmt->fetch(PDO::FETCH_ASSOC);		return $res;	}    }
+<?phpclass Example extends Model {    function test() {        Core::message(__METHOD__, 'Creating test table');        $stmt = $this->db->query('CREATE TABLE `test` (`id` INT NULL)');        $stmt = $this->db->query('show tables');        $res = $stmt->fetch(PDO::FETCH_ASSOC);        Core::message(__METHOD__, print_r($res, true));    }}

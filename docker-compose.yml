@@ -14,7 +14,7 @@ services:
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_USERNAME: "${DB_USERNAME}"
       MYSQL_PASSWORD: "${DB_PASSWORD}"
-      MYSQL_HOST: "${DB_HOST}"
+      MYSQL_HOST: "${PROJECT_NAME}-mysql"
       MYSQL_PORT: "${DB_PORT}"
       DEBUG: "true"
     networks:

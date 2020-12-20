@@ -7,8 +7,6 @@ $db_settings = [
     "db_name"     => getenv('MYSQL_DATABASE'),
     "db_port"     => getenv('MYSQL_PORT'),
 ];
-print_r(getenv());
-print_r($db_settings);
 
 $routes = [
     "index" => [
