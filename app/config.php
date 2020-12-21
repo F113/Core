@@ -24,7 +24,7 @@ trait Patterns {
 
     function pattern_default($path) {
         $this->load('header');
-        $this->load($path);
+        $this->load($path, ['example' => 'this text will be available in $example variable']);
         $this->load('footer');
     }
 
